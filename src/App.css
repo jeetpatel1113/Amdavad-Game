@@ -31,7 +31,7 @@ main {
 .text-bar {
   position: absolute;
   top: 50%;
-  right: 300px;
+  right: 200px;
   transform: translateY(-50%);
   background: #222;
   color: white;
