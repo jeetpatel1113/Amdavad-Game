@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amdavad - Board Game</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+</head>
+<body>
+    <!-- Login Screen -->
+    <div id="loginScreen" style="text-align:center; margin-top:40px;">
+        <h2>Enter Game Password</h2>
+        <input type="password" id="passwordInput" placeholder="Password" />
+        <button onclick="submitPassword()">Join Game</button>
+        <p id="loginMessage" style="color:red;"></p>
+    </div>
+    <div id="gameContainer" class="container" style="display:none;">
+        <h1 class="title">Amdavad</h1>
+        
+        <div class="game-area">
+            <!-- Game Board -->
+            <div class="board-container">
+                <canvas id="gameBoard" width="600" height="600"></canvas>
+            </div>
+            
+            <!-- Score Panel -->
+            <div class="score-panel">
+                <div class="score-item">
+                    <div class="label">White Dice Count:</div>
+                    <div class="value" id="whiteCount">0</div>
+                </div>
+                <div class="score-item">
+                    <div class="label">Move Count:</div>
+                    <div class="value" id="moveCount">0</div>
+                </div>
+                <div class="score-item">
+                    <div class="label">Last 5 Rolls:</div>
+                    <div id="rollHistory"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Tokens Area -->
+        <div class="tokens-container">
+            <div id="tokens"></div>
+        </div>
+        
+        <!-- Dice Area -->
+        <div class="dice-container">
+            <div class="dice-wrapper">
+                <div class="die" id="die0"></div>
+                <div class="die" id="die1"></div>
+                <div class="die" id="die2"></div>
+                <div class="die" id="die3"></div>
+            </div>
+        </div>
+        
+        <div class="connection-status" id="status">Connecting...</div>
+    </div>
+    
+    <script src="{{ url_for('static', filename='js/game.js') }}"></script>
+</body>
+</html>

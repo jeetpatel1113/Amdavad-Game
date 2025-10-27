@@ -21,7 +21,7 @@ colors = {
 
 # ---------- NETWORK ----------
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-client.connect(('localhost', 5000))
+client.connect(('192.168.0.102', 5000))
 
 tokens = []
 dice = ['white'] * 4
