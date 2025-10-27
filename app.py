@@ -4,14 +4,19 @@ eventlet.monkey_patch()
 from flask import Flask, render_template
 from flask_socketio import SocketIO, emit
 from flask_cors import CORS
+from dotenv import load_dotenv
 import random
 import os
+
 
 # ======================
 # Config & Globals
 # ======================
 
-SECRET_GAME_PASSWORD = "jeetmaster"
+load_dotenv()  # Load environment variables from .env
+
+SECRET_GAME_PASSWORD = os.getenv("SECRET_GAME_PASSWORD")
+
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.urandom(24)
