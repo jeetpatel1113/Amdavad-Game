@@ -2,7 +2,7 @@
 
 A real-time multiplayer board game implementation of Amdavad, a traditional game from Ahmedabad (Amdavad), India. This digital version brings the classic board game to life using modern web technologies.
 
-🎮 **Play Now**: [https://amdavad-game1.netlify.app/](https://amdavad-game1.netlify.app/)
+🎮 **Play Now**: [https://amdavad-game.onrender.com/](https://amdavad-game.onrender.com/)
 
 ## Features
 
