@@ -72,6 +72,10 @@ http://localhost:5555
 - State management handled on the server side
 - Responsive design for both desktop and mobile devices
 
+## Password
+
+jeetmaster
+
 ## Contributing
 
 Feel free to submit issues, fork the repository, and create pull requests for any improvements.
